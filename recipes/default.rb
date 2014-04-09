@@ -22,9 +22,8 @@ windows_zipfile "c:/" do
   not_if {::File.exists?(node['xd7']['dir'])}
 end
 
-windows_batch "XD7 LS" do
+batch "XD7 LS" do
   code <<-EOH
-  cd c:\\XenDesktop7_1
   c:\\XenDesktop7_1\\x64\\XenDesktopSetup\\XenDesktopServerSetup.exe /quiet /COMPONENTS LICENSESERVER /CONFIGURE_FIREWALL 
   EOH
   not_if {::File.exists?(['licsrv']['dir'])}

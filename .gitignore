@@ -1,5 +1,6 @@
 .vagrant
 Berksfile.lock
+.berksfile/*
 *~
 *#
 .#*
@@ -13,14 +14,8 @@ Gemfile.lock
 bin/*
 .bundle/*
 
-# OS X
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-._*
-.Spotlight-V100
-.Trashes
+.kitchen/
+.kitchen.local.yml
 
 # Chef
 .chef/*.pem
